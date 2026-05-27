@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  /* Primary Palette - Dark Sections */
+  --color-primary: #281A0E;
+  --color-primary-dark: #1a1108;
+  
+  /* Secondary - Aged Gold (accents, buttons, highlights) */
+  --color-secondary: #C48640;
+  --color-secondary-dark: #A87335;
+  --color-secondary-light: #D4A574;
+  
+  /* Accent - Scripture Blue & Pastoral Green */
+  --color-accent: #183A5C;
+  --color-accent-light: #3E684A;
+  
+  /* Light Sections - Warm Cream/Parchment (updated) */
+  --color-light: #FAF7EE;
+  --color-dark: #2D2D2D;
+  
+  /* Text Colors */
+  --color-text-light: #F5ED08;
+  --color-text-dark: #2D2D2D;
+  
+  /* Supporting Colors */
+  --color-sand: #D4C4A8;
+  --color-ivory: #FAF7EE;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-light text-dark;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant Garamond", serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-8 md:px-16 lg:px-20;
+  }
+
+  .btn-primary {
+    @apply bg-secondary text-primary px-8 py-3 rounded-md font-bold
+           tracking-widest uppercase transition-all duration-300
+           hover:bg-secondary-dark hover:shadow-lg
+           transform hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-primary text-text-light border-2 border-secondary/40 px-8 py-3 rounded-md font-bold
+           tracking-widest uppercase transition-all duration-300
+           hover:bg-secondary hover:text-primary hover:shadow-lg
+           transform hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply border-2 border-secondary text-secondary px-8 py-3 rounded-md
+           font-bold tracking-widest uppercase transition-all duration-300
+           hover:bg-secondary hover:text-primary hover:shadow-lg;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-secondary mb-4 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-dark/60 text-center max-w-3xl mx-auto mb-12;
+  }
+
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+
+  .font-display-italic {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .font-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .font-author {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+    margin: 0 auto;
+  }
+}
