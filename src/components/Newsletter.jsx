@@ -40,12 +40,12 @@ const Newsletter = () => {
               <span className="text-sm text-secondary">{authorData.email}</span>
             </div>
           )}
-          {authorData.phone && (
+          {/* {authorData.phone && (
             <div className="backdrop-blur-sm px-5 py-2 rounded-full inline-flex items-center gap-2 bg-white/10 border border-secondary/30">
               <FaPhone size={13} className="text-secondary" />
               <span className="text-sm text-secondary">{authorData.phone}</span>
             </div>
-          )}
+          )} */}
         </div>
 
         <div className="max-w-md mx-auto mb-8">
