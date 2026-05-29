@@ -28,9 +28,14 @@ const Footer = () => {
 
           {/* CTA */}
           <div className="flex justify-center">
-            <button className="font-author text-sm font-bold py-3 px-8 rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 bg-secondary text-primary hover:opacity-90">
-              Get the Book
-            </button>
+            <a
+              href="https://buy.stripe.com/7sY5kEdVm6vNfRU8Ey2kw07"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-author text-sm font-bold py-3 px-8 rounded-md shadow-lg transform transition-all duration-300 hover:scale-105 bg-secondary text-primary hover:opacity-90"
+            >
+              Launch &amp; Go-Live Portal
+            </a>
           </div>
 
           {/* Socials */}
